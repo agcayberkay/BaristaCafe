@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BaristaCafe.Domain.Entities
+namespace BaristaCafe.Application.Features.Mediatör.Results.AboutCafeResults
 {
-    public class AboutCafe
+    public class GetAboutCafeByIdQueryResult
     {
         public int AboutCafeId { get; set; }
         public string CafeName { get; set; }

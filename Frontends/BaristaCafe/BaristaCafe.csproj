@@ -14,4 +14,8 @@
     <None Include="wwwroot\2137_barista_cafe\js\.DS_Store" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\Infrastructure\BaristaCafe.Persistence\BaristaCafe.Persistence.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -1,12 +1,13 @@
-﻿using System;
+﻿using MediatR;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BaristaCafe.Domain.Entities
+namespace BaristaCafe.Application.Features.Mediatör.Commands.AboutCafe
 {
-    public class AboutCafe
+    public class UpdateAboutCafeCommand:IRequest
     {
         public int AboutCafeId { get; set; }
         public string CafeName { get; set; }

@@ -8,7 +8,7 @@ namespace BaristaCafe.Domain.Entities
 {
     public class WelcomeScreen
     {
-        public int WScreenId { get; set; }
+        public int WelcomeScreenId { get; set; }
         public string Title { get; set; }
         public string Name { get; set; }
         public string Desc { get; set; }
