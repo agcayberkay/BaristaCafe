@@ -1,12 +1,13 @@
-﻿using System;
+﻿using MediatR;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BaristaCafe.Domain.Entities
+namespace BaristaCafe.Application.Features.Mediatör.Commands.TestimonialCommands
 {
-    public class Testimonial
+    public class UpdateTestimonialCommand:IRequest
     {
         public int TestimonialId { get; set; }
         public string TitleDesc { get; set; }
@@ -15,6 +16,6 @@ namespace BaristaCafe.Domain.Entities
         public string Grade { get; set; }
         public string Desc { get; set; }
         public string ImageUrl { get; set; }
-        public int? Rating { get; set; } 
+        public int? Rating { get; set; }
     }
 }
