@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BaristaCafe.Application.Features.Mediatör.Results.WorkingDaysResults
 {
-    public class GetWorkingDayByIdQueryResult
+    public class GetWorkingHoursByIdQueryResult
     {
         public int WorkingHoursId { get; set; }
         public string WorkingDays { get; set; }
