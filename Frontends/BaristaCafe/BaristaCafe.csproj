@@ -7,11 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
+    <None Include="wwwroot\2137_barista_cafe\js\.DS_Store" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="wwwroot\2137_barista_cafe\js\.DS_Store" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="9.0.0" />
   </ItemGroup>
 
   <ItemGroup>

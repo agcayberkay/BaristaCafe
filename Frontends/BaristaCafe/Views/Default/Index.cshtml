@@ -1,0 +1,34 @@
+﻿@{
+    Layout = null;
+}
+
+<!doctype html>
+<html lang="en">
+@await Component.InvokeAsync("_HeadComponentPartial")
+
+<body>
+
+    <main>
+        @await Component.InvokeAsync("_NavbarComponentPartial")
+
+        @await Component.InvokeAsync("_WelcomeScreenComponentPartial")
+        
+        @await Component.InvokeAsync("_AboutComponentPartial")
+
+        @await Component.InvokeAsync("_BaristasComponentPartial")
+
+        @await Component.InvokeAsync("_CafeMenuComponentPartial") 
+
+        @await Component.InvokeAsync("_TestimonialComponentPartial")
+
+        @await Component.InvokeAsync("_ContactComponentPartial")
+
+        @await Component.InvokeAsync("_WorkingHoursComponentPartial")
+
+    </main>
+
+    <!-- JAVASCRIPT FILES -->
+    @await Component.InvokeAsync("_JavaScriptComponentPartial")
+
+</body>
+</html>
