@@ -3,6 +3,7 @@ using BaristaCafe.Persistence.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BaristaCafe.Persistence.Migrations
 {
     [DbContext(typeof(BaristaCafeContext))]
-    partial class BaristaCafeContextModelSnapshot : ModelSnapshot
+    [Migration("20250702163327_mig9")]
+    partial class mig9
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -50,27 +53,6 @@ namespace BaristaCafe.Persistence.Migrations
                     b.ToTable("AboutCafes");
                 });
 
-            modelBuilder.Entity("BaristaCafe.Domain.Entities.BaristaDesc", b =>
-                {
-                    b.Property<int>("BaristaDescId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("BaristaDescId"));
-
-                    b.Property<string>("BigTitle")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Title")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("BaristaDescId");
-
-                    b.ToTable("BaristaDescs");
-                });
-
             modelBuilder.Entity("BaristaCafe.Domain.Entities.Baristas", b =>
                 {
                     b.Property<int>("BaristasId")
@@ -78,6 +60,9 @@ namespace BaristaCafe.Persistence.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("BaristasId"));
+
+                    b.Property<string>("BigTitle")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Desc")
                         .IsRequired()
@@ -95,9 +80,29 @@ namespace BaristaCafe.Persistence.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Title")
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("BaristasId");
 
                     b.ToTable("Baristases");
+                });
+
+            modelBuilder.Entity("BaristaCafe.Domain.Entities.Cafe", b =>
+                {
+                    b.Property<int>("CafeId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CafeId"));
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("CafeId");
+
+                    b.ToTable("Cafes");
                 });
 
             modelBuilder.Entity("BaristaCafe.Domain.Entities.CafeMenu", b =>
@@ -108,29 +113,16 @@ namespace BaristaCafe.Persistence.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CafeMenuId"));
 
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Favorite")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("MenuName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<decimal>("Price")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<string>("ProductName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("CafeId")
+                        .HasColumnType("int");
 
                     b.Property<string>("Title")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("CafeMenuId");
+
+                    b.HasIndex("CafeId");
 
                     b.ToTable("CafeMenus");
                 });
@@ -183,6 +175,34 @@ namespace BaristaCafe.Persistence.Migrations
                     b.HasKey("LocationId");
 
                     b.ToTable("Locations");
+                });
+
+            modelBuilder.Entity("BaristaCafe.Domain.Entities.MenuItem", b =>
+                {
+                    b.Property<int>("MenuItemId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("MenuItemId"));
+
+                    b.Property<int>("CafeMenuId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("MenuId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal>("Price")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.HasKey("MenuItemId");
+
+                    b.HasIndex("CafeMenuId");
+
+                    b.ToTable("MenuItems");
                 });
 
             modelBuilder.Entity("BaristaCafe.Domain.Entities.Testimonial", b =>
@@ -279,6 +299,38 @@ namespace BaristaCafe.Persistence.Migrations
                     b.HasKey("WorkingHoursId");
 
                     b.ToTable("WorkingHours");
+                });
+
+            modelBuilder.Entity("BaristaCafe.Domain.Entities.CafeMenu", b =>
+                {
+                    b.HasOne("BaristaCafe.Domain.Entities.Cafe", "Cafe")
+                        .WithMany("CafeMenus")
+                        .HasForeignKey("CafeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Cafe");
+                });
+
+            modelBuilder.Entity("BaristaCafe.Domain.Entities.MenuItem", b =>
+                {
+                    b.HasOne("BaristaCafe.Domain.Entities.CafeMenu", "CafeMenu")
+                        .WithMany("MenuItems")
+                        .HasForeignKey("CafeMenuId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("CafeMenu");
+                });
+
+            modelBuilder.Entity("BaristaCafe.Domain.Entities.Cafe", b =>
+                {
+                    b.Navigation("CafeMenus");
+                });
+
+            modelBuilder.Entity("BaristaCafe.Domain.Entities.CafeMenu", b =>
+                {
+                    b.Navigation("MenuItems");
                 });
 #pragma warning restore 612, 618
         }

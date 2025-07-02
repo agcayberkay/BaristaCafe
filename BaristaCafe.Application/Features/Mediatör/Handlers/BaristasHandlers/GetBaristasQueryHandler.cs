@@ -25,12 +25,11 @@ namespace BaristaCafe.Application.Features.Mediatör.Handlers.BaristasHandlers
             var baristas = await _repository.GetAllAsync();
             return baristas.Select(b => new GetBaristasQueryResult
             {
-                BigTitle = b.BigTitle,
+                BaristasId = b.BaristasId,
                 Desc = b.Desc,
                 Grade = b.Grade,
                 ImageUrl = b.ImageUrl,
-                Name = b.Name,
-                Title = b.Title
+                Name = b.Name
             }).ToList();
         }
     }

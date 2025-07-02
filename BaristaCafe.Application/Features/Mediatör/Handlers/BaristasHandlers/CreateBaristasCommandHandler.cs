@@ -23,12 +23,11 @@ namespace BaristaCafe.Application.Features.Mediatör.Handlers.BaristasHandlers
         {
             await _repository.CrateAsync(new Baristas
             {
-                BigTitle = request.BigTitle,
+
                 Desc = request.Desc,
                 Grade = request.Grade,
                 ImageUrl = request.ImageUrl,
-                Name = request.Name,
-                Title = request.Title
+                Name = request.Name
             });
 
         }

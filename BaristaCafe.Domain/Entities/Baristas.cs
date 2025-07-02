@@ -9,8 +9,6 @@ namespace BaristaCafe.Domain.Entities
     public class Baristas
     {
         public int BaristasId { get; set; }
-        public string Title { get; set; }
-        public string BigTitle  { get; set; }
         public string Name { get; set; }
         public string Grade { get; set; }
         public string Desc { get; set; }

@@ -3,6 +3,7 @@ using BaristaCafe.Persistence.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BaristaCafe.Persistence.Migrations
 {
     [DbContext(typeof(BaristaCafeContext))]
-    partial class BaristaCafeContextModelSnapshot : ModelSnapshot
+    [Migration("20250702170226_migupdate")]
+    partial class migupdate
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -48,27 +51,6 @@ namespace BaristaCafe.Persistence.Migrations
                     b.HasKey("AboutCafeId");
 
                     b.ToTable("AboutCafes");
-                });
-
-            modelBuilder.Entity("BaristaCafe.Domain.Entities.BaristaDesc", b =>
-                {
-                    b.Property<int>("BaristaDescId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("BaristaDescId"));
-
-                    b.Property<string>("BigTitle")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Title")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("BaristaDescId");
-
-                    b.ToTable("BaristaDescs");
                 });
 
             modelBuilder.Entity("BaristaCafe.Domain.Entities.Baristas", b =>

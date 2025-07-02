@@ -14,15 +14,25 @@ namespace BaristaCafe.Persistence.Context
         {
             optionsBuilder.UseSqlServer("Server=DESKTOP-PJJV610\\SQLEXPRESS;initial catalog=BaristaCafeDB;integrated security=true;TrustServerCertificate=true;");
         }
+        public BaristaCafeContext(DbContextOptions<BaristaCafeContext> options)
+      : base(options)
+        {
+        }
 
         public DbSet<AboutCafe> AboutCafes { get; set; }
         public DbSet<Baristas> Baristases { get; set; }
-        public DbSet<CafeMenu> CafeMenus { get; set; }
+        public DbSet<BaristaDesc> BaristaDescs { get; set; }
         public DbSet<Contact> Contacts { get; set; }
         public DbSet<Location> Locations { get; set; }
         public DbSet<Testimonial> Testimonials { get; set; }
         public DbSet<WelcomeScreen> WelcomeScreens { get; set; }
         public DbSet<WorkingHours> WorkingHours { get; set; }
+        public DbSet<CafeMenu> CafeMenus { get; set; }
+
+
+
+        
+
 
 
     }

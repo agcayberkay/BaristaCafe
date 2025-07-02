@@ -2,14 +2,18 @@ using BaristaCafe.Application.Interfaces;
 using BaristaCafe.Application.Services;
 using BaristaCafe.Persistence.Context;
 using BaristaCafe.Persistence.Repositories;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 
 
 var builder = WebApplication.CreateBuilder(args);
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+
 
 // Add services to the container.
-builder.Services.AddScoped<BaristaCafeContext>();
 builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
-
+builder.Services.AddDbContext<BaristaCafeContext>(options =>
+    options.UseSqlServer(connectionString));
 
 
 

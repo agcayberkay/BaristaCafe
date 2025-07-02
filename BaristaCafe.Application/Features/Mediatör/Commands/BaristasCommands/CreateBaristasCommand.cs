@@ -9,8 +9,6 @@ namespace BaristaCafe.Application.Features.Mediatör.Commands.BaristasCommands
 {
     public class CreateBaristasCommand:IRequest
     {
-        public string Title { get; set; }
-        public string BigTitle { get; set; }
         public string Name { get; set; }
         public string Grade { get; set; }
         public string Desc { get; set; }

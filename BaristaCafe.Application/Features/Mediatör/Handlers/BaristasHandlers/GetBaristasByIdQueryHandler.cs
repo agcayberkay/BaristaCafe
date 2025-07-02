@@ -27,8 +27,6 @@ namespace BaristaCafe.Application.Features.Mediatör.Handlers.BaristasHandlers
             return new GetBaristasByIdQueryResult
             {
                 BaristasId = barista.BaristasId,
-                Title = barista.Title,
-                BigTitle = barista.BigTitle,
                 Name = barista.Name,
                 Grade = barista.Grade,
                 Desc = barista.Desc,

@@ -22,12 +22,10 @@ namespace BaristaCafe.Application.Features.Mediatör.Handlers.BaristasHandlers
         public async Task Handle(UpdateBaristasCommand request, CancellationToken cancellationToken)
         {
             var barista = await _repository.GetByIdAsync(request.BaristasId);
-            barista.BigTitle = request.BigTitle;
             barista.Desc = request.Desc;
             barista.Grade = request.Grade;
             barista.ImageUrl = request.ImageUrl;
             barista.Name = request.Name;
-            barista.Title = request.Title;
             await _repository.UpdateAsync(barista);
         }
     }
