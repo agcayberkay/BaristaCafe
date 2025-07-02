@@ -27,11 +27,11 @@ namespace BaristaCafe.Persistence.Context
         public DbSet<Testimonial> Testimonials { get; set; }
         public DbSet<WelcomeScreen> WelcomeScreens { get; set; }
         public DbSet<WorkingHours> WorkingHours { get; set; }
-        public DbSet<CafeMenu> CafeMenus { get; set; }
+        public DbSet<Menu> Menus { get; set; }
+        public DbSet<MenuItem> MenuItems { get; set; }
 
 
 
-        
 
 
 

@@ -1,0 +1,72 @@
+﻿@model List<MenuViewModel>
+
+<section class="menu-section section-padding" id="section_3">
+    <div class="container">
+
+        @for (int i = 0; i < Model.Count; i += 2)
+        {
+            <div class="row mb-5">
+                <!-- SOL SÜTUN -->
+                <div class="col-lg-6 col-12 mb-4 mb-lg-0">
+                    @if (Model.Count > i)
+                    {
+                        var menu = Model[i];
+                        <div class="menu-block-wrap">
+                            <div class="text-center mb-4 pb-lg-2">
+                                <em class="text-white">Menü</em>
+                                <h4 class="text-white">@menu.Title</h4>
+                            </div>
+
+                            @foreach (var item in menu.Items)
+                            {
+                                <div class="menu-block">
+                                    <div class="d-flex">
+                                        <h6>@item.Name</h6>
+                                        <span class="underline"></span>
+                                        <strong class="ms-auto">@item.Price.ToString("C")</strong>
+                                    </div>
+
+                                    <div class="border-top mt-2 pt-2">
+                                        <small>@item.Description</small>
+                                    </div>
+                                </div>
+                                <br></br>
+                            }
+                        </div>
+                    }
+                </div>
+
+                <!-- SAĞ SÜTUN -->
+                <div class="col-lg-6 col-12">
+                    @if (Model.Count > i + 1)
+                    {
+                        var menu = Model[i + 1];
+                        <div class="menu-block-wrap">
+                            <div class="text-center mb-4 pb-lg-2">
+                                <em class="text-white">Menü</em>
+                                <h4 class="text-white">@menu.Title</h4>
+                            </div>
+
+                            @foreach (var item in menu.Items)
+                            {
+                                <div class="menu-block">
+                                    <div class="d-flex">
+                                        <h6>@item.Name</h6>
+                                        <span class="underline"></span>
+                                        <strong class="ms-auto">@item.Price.ToString("C")</strong>
+                                    </div>
+
+                                    <div class="border-top mt-2 pt-2">
+                                        <small>@item.Description</small>
+                                    </div>
+                                </div>
+                                <br></br>
+                            }
+                        </div>
+                    }
+                </div>
+            </div>
+        }
+
+    </div>
+</section>

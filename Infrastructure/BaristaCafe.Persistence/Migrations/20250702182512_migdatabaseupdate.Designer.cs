@@ -3,6 +3,7 @@ using BaristaCafe.Persistence.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BaristaCafe.Persistence.Migrations
 {
     [DbContext(typeof(BaristaCafeContext))]
-    partial class BaristaCafeContextModelSnapshot : ModelSnapshot
+    [Migration("20250702182512_migdatabaseupdate")]
+    partial class migdatabaseupdate
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -98,6 +101,41 @@ namespace BaristaCafe.Persistence.Migrations
                     b.HasKey("BaristasId");
 
                     b.ToTable("Baristases");
+                });
+
+            modelBuilder.Entity("BaristaCafe.Domain.Entities.CafeMenu", b =>
+                {
+                    b.Property<int>("CafeMenuId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CafeMenuId"));
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Favorite")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("MenuName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal>("Price")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("ProductName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("CafeMenuId");
+
+                    b.ToTable("CafeMenus");
                 });
 
             modelBuilder.Entity("BaristaCafe.Domain.Entities.Contact", b =>
