@@ -30,9 +30,8 @@ namespace BaristaCafe.Application.Features.Mediatör.Handlers.TestimonialHandler
                 Grade = t.Grade,
                 Name = t.Name,
                 Rating = t.Rating,
-                Title = t.Title,
                 TestimonialId = t.TestimonialId,
-                TitleDesc = t.TitleDesc
+
             }).ToList();
         }
     }

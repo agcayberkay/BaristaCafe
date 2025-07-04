@@ -3,6 +3,7 @@ using BaristaCafe.Persistence.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BaristaCafe.Persistence.Migrations
 {
     [DbContext(typeof(BaristaCafeContext))]
-    partial class BaristaCafeContextModelSnapshot : ModelSnapshot
+    [Migration("20250704003057_migTestimonialUpdate")]
+    partial class migTestimonialUpdate
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -196,27 +199,6 @@ namespace BaristaCafe.Persistence.Migrations
                     b.ToTable("MenuItems");
                 });
 
-            modelBuilder.Entity("BaristaCafe.Domain.Entities.SocailMedia", b =>
-                {
-                    b.Property<int>("SocailMediaId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("SocailMediaId"));
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Url")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("SocailMediaId");
-
-                    b.ToTable("SocailMedias");
-                });
-
             modelBuilder.Entity("BaristaCafe.Domain.Entities.Testimonial", b =>
                 {
                     b.Property<int>("TestimonialId")
@@ -287,9 +269,6 @@ namespace BaristaCafe.Persistence.Migrations
 
                     b.Property<string>("ClosingTime")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("HolidaysWorkClock")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("HolidaysWorkTime")

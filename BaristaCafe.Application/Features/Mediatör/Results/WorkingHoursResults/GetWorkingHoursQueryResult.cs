@@ -14,5 +14,6 @@ namespace BaristaCafe.Application.Features.Mediatör.Results.WorkingDaysResults
         public string ClosingTime { get; set; }
         public string? HolidaysWorkTime { get; set; }
         public string? ClosedDay { get; set; }
+        public string? HolidaysWorkClock { get; set; }
     }
 }

@@ -9,8 +9,6 @@ namespace BaristaCafe.Application.Features.Mediatör.Results.TestimonialResults
     public class GetTestimonialByIdQueryResult
     {
         public int TestimonialId { get; set; }
-        public string TitleDesc { get; set; }
-        public string Title { get; set; }
         public string Name { get; set; }
         public string Grade { get; set; }
         public string Desc { get; set; }

@@ -27,6 +27,7 @@ namespace BaristaCafe.Application.Features.Mediatör.Handlers.WorkingHoursHandle
             return workingHours.Select(wh => new GetWorkingHoursQueryResult
             {
                 ClosedDay = wh.ClosedDay,
+                HolidaysWorkClock = wh.HolidaysWorkClock,
                 ClosingTime = wh.ClosingTime,
                 HolidaysWorkTime = wh.HolidaysWorkTime,
                 OpeningTime = wh.OpeningTime,

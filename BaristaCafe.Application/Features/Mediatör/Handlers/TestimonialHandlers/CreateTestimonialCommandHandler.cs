@@ -27,9 +27,7 @@ namespace BaristaCafe.Application.Features.Mediatör.Handlers.TestimonialHandler
                ImageUrl = request.ImageUrl,
                Grade = request.Grade,
                Name = request.Name,
-               Rating = request.Rating,
-               Title = request.Title,
-               TitleDesc = request.TitleDesc
+               Rating = request.Rating
            });
         }
     }

@@ -758,7 +758,7 @@ strong {
     }
 
 .reviews-block-image-wrap {
-    background-image: url('2137_barista_cafe/images/mid-section-waitress-wiping-espresso-machine-with-napkin-cafa-c.jpg');
+    background-image: url('/2137_barista_cafe/images/mid-section-waitress-wiping-espresso-machine-with-napkin-cafa-c.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -792,7 +792,7 @@ strong {
   BOOKING SECTION              
 -----------------------------------------*/
 .booking-section {
-    background-image: url('2137_barista_cafe/images/young-female-barista-wear-face-mask-serving-take-away-hot-coffee-paper-cup-consumer-cafe.jpg');
+    background-image: url('/2137_barista_cafe/images/young-female-barista-wear-face-mask-serving-take-away-hot-coffee-paper-cup-consumer-cafe.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

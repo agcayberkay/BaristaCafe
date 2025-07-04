@@ -4,14 +4,15 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace BaristaCafe.ViewComponents
 {
-    public class _WorkingHoursComponentPartial : ViewComponent
+    public class _SocailMediaComponenetPartial : ViewComponent
     {
-        private readonly IRepository<WorkingHours> _repository;
+        private readonly IRepository<SocailMedia> _repository;
 
-        public _WorkingHoursComponentPartial(IRepository<WorkingHours> repository)
+        public _SocailMediaComponenetPartial(IRepository<SocailMedia> repository)
         {
             _repository = repository;
         }
+
 
         public async Task<IViewComponentResult> InvokeAsync()
         {

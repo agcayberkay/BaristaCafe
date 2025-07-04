@@ -23,6 +23,7 @@ namespace BaristaCafe.Application.Features.Mediatör.Handlers.WorkingHoursHandle
         {
             var workingHours = await _repository.GetByIdAsync(request.WorkingHoursId);
             workingHours.WorkingDays = request.WorkingDays;
+            workingHours.HolidaysWorkClock = request.HolidaysWorkClock;
             workingHours.ClosedDay = request.ClosedDay;
             workingHours.ClosingTime = request.ClosingTime;
             workingHours.OpeningTime = request.OpeningTime;

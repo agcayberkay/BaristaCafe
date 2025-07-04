@@ -10,8 +10,6 @@ namespace BaristaCafe.Application.Features.Mediatör.Commands.TestimonialCommand
     public class UpdateTestimonialCommand:IRequest
     {
         public int TestimonialId { get; set; }
-        public string TitleDesc { get; set; }
-        public string Title { get; set; }
         public string Name { get; set; }
         public string Grade { get; set; }
         public string Desc { get; set; }

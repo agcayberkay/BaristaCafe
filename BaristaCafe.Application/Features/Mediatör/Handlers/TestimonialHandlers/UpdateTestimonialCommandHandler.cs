@@ -27,8 +27,6 @@ namespace BaristaCafe.Application.Features.Mediatör.Handlers.TestimonialHandler
             testimonial.Grade = request.Grade;
             testimonial.Name = request.Name;
             testimonial.Rating = request.Rating;
-            testimonial.Title = request.Title;
-            testimonial.TitleDesc = request.TitleDesc;
             await _repository.UpdateAsync(testimonial);
         }
     }

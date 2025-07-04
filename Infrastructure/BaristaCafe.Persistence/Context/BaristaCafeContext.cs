@@ -29,6 +29,7 @@ namespace BaristaCafe.Persistence.Context
         public DbSet<WorkingHours> WorkingHours { get; set; }
         public DbSet<Menu> Menus { get; set; }
         public DbSet<MenuItem> MenuItems { get; set; }
+        public DbSet<SocailMedia> SocailMedias { get; set; }
 
 
 

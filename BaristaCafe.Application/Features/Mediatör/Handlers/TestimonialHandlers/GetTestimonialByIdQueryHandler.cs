@@ -27,8 +27,6 @@ namespace BaristaCafe.Application.Features.Mediatör.Handlers.TestimonialHandler
             var testimonial = await _repository.GetByIdAsync(request.Id);
             return new GetTestimonialByIdQueryResult
             {
-                TitleDesc = testimonial.TitleDesc,
-                Title = testimonial.Title,
                 Name = testimonial.Name,
                 Grade = testimonial.Grade,
                 Desc = testimonial.Desc,

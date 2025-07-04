@@ -4,11 +4,11 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace BaristaCafe.ViewComponents
 {
-    public class _WorkingHoursComponentPartial : ViewComponent
+    public class _LocationComponenetPartial : ViewComponent
     {
-        private readonly IRepository<WorkingHours> _repository;
+        private readonly IRepository<Location> _repository;
 
-        public _WorkingHoursComponentPartial(IRepository<WorkingHours> repository)
+        public _LocationComponenetPartial(IRepository<Location> repository)
         {
             _repository = repository;
         }
@@ -22,5 +22,6 @@ namespace BaristaCafe.ViewComponents
             }
             return View(model);
         }
+
     }
 }

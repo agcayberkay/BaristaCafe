@@ -1,0 +1,11 @@
+﻿@model List<SocailMedia>
+
+<ul class="social-icon mt-4">
+    @foreach (var item in Model)
+    {
+        <li class="social-icon-item">
+            <a href="@item.Url" class="social-icon-link bi-@item.Name.ToLower()">
+            </a>
+        </li>
+    }
+</ul>

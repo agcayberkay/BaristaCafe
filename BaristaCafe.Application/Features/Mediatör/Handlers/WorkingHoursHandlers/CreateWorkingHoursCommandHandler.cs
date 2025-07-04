@@ -24,6 +24,7 @@ namespace BaristaCafe.Application.Features.Mediatör.Handlers.WorkingHoursHandle
            await _repository.CrateAsync(new WorkingHours
            {
                ClosedDay = request.ClosedDay,
+               HolidaysWorkClock = request.HolidaysWorkClock,
                ClosingTime = request.ClosingTime,
                HolidaysWorkTime = request.HolidaysWorkTime,
                OpeningTime = request.OpeningTime,
