@@ -1,0 +1,40 @@
+﻿@model WelcomeScreen
+
+@{
+    ViewData["Title"] = "WelcomeScreen Güncelle";
+    Layout = "~/Views/Layout/Index.cshtml";
+}
+<div class="main-panel">
+<div class="container mt-5" style="max-width:600px;">
+    <div class="card shadow-sm">
+        <div class="card-header bg-primary text-white">
+            <h3 class="mb-0 text-center">Slider Güncelle</h3>
+        </div>
+        <div class="card-body">
+                <form asp-action="UpdateWS" method="post" novalidate>
+                <input type="hidden" asp-for="WelcomeScreenId" />
+
+                <div class="mb-3">
+                    <label asp-for="Title" class="form-label">Başlık</label>
+                    <input asp-for="Title" class="form-control" placeholder="Başlık giriniz" />
+                    <span asp-validation-for="Title" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Name" class="form-label">İsim</label>
+                    <input asp-for="Name" class="form-control" placeholder="İsim giriniz" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Desc" class="form-label">Açıklama</label>
+                    <textarea asp-for="Desc" class="form-control" rows="4" placeholder="Açıklama giriniz"></textarea>
+                    <span asp-validation-for="Desc" class="text-danger"></span>
+                </div>
+
+                <button type="submit" class="btn btn-success w-100">Güncelle</button>
+            </form>
+        </div>
+    </div>
+</div>
+</div>

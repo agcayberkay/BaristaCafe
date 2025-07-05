@@ -1,0 +1,50 @@
+﻿@model AboutCafe
+@{
+    ViewData["Title"] = "AboutCafe Güncelle";
+    Layout = "~/Views/Layout/Index.cshtml";
+}
+<div class="main-panel">
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <!-- genişliği ayarlayabilirsin -->
+            <div class="card shadow-sm">
+                <div class="card-header bg-primary text-white">
+                    <h3 class="mb-0 text-center">Kafe Bilgilerini Güncelle</h3>
+                </div>
+                <div class="card-body">
+                    <form asp-action="UpdateAboutCafe" method="post" novalidate>
+                        <input type="hidden" asp-for="AboutCafeId" />
+
+                        <div class="mb-3">
+                            <label asp-for="Title" class="form-label">Başlık</label>
+                            <input asp-for="Title" class="form-control" placeholder="Başlık giriniz" />
+                            <span asp-validation-for="Title" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="CafeName" class="form-label">İşletme Adı</label>
+                            <input asp-for="CafeName" class="form-control" placeholder="İşletme adını giriniz" />
+                            <span asp-validation-for="CafeName" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Desc" class="form-label">Açıklama</label>
+                            <textarea asp-for="Desc" class="form-control" rows="20" placeholder="Açıklama giriniz"></textarea>
+                            <span asp-validation-for="Desc" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="VideoUrl" class="form-label">Video URL (Opsiyonel)</label>
+                            <input asp-for="VideoUrl" class="form-control" placeholder="Video linkini yapıştırın" />
+                            <span asp-validation-for="VideoUrl" class="text-danger"></span>
+                        </div>
+
+                        <button type="submit" class="btn btn-success w-100">Güncelle</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
