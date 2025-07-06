@@ -1,0 +1,28 @@
+﻿@model SocailMedia
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Layout/Index.cshtml";
+}
+
+<div class="main-panel">
+<h2>Sosyal Medya Düzenle</h2>
+
+<form asp-action="Edit" method="post" novalidate>
+    <input type="hidden" asp-for="SocailMediaId" />
+
+    <div class="mb-3">
+        <label asp-for="Name" class="form-label">Sosyal Medya Adı</label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Url" class="form-label">URL</label>
+        <input asp-for="Url" class="form-control" />
+        <span asp-validation-for="Url" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Güncelle</button>
+    <a asp-action="Index" class="btn btn-secondary ms-2">İptal</a>
+</form>
+</div>

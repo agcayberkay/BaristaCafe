@@ -30,7 +30,8 @@ namespace BaristaCafe.Application.Features.Mediatör.Handlers.LocaitonHandlers
                 LocationId = l.LocationId,
                 Address = l.Address,
                 Email = l.Email,
-                Phone = l.Phone
+                Phone = l.Phone,
+                MapsUrl = l.MapsUrl
             }).ToList();
         }
     }

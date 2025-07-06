@@ -29,7 +29,8 @@ namespace BaristaCafe.Application.Features.Mediatör.Handlers.LocaitonHandlers
                 LocationId = locations.LocationId,
                 Address = locations.Address,
                 Phone = locations.Phone,
-                Email = locations.Email
+                Email = locations.Email,
+                MapsUrl = locations.MapsUrl
             };
         }
     }

@@ -1,0 +1,109 @@
+﻿
+@{
+    ViewData["Title"] = "Dashboard";
+    Layout = "~/Views/Layout/Index.cshtml";
+}
+
+@model BaristaCafe.Controllers.DashboardViewModel
+
+<div class="main-panel">
+
+
+    <h2 class="mb-4">Dashboard</h2>
+
+    <div class="row">
+
+        <!-- Total Baristas -->
+        <div class="col-md-3 mb-3">
+            <div class="card text-white bg-warning h-100">
+                <div class="card-body d-flex align-items-center">
+                    <div class="me-3">
+                        <i class="bi bi-people-fill" style="font-size: 2.5rem;"></i>
+                    </div>
+                    <div>
+                        <h5 class="card-title">Çalışan Sayısı</h5>
+                        <h3>@Model.TotalBaristas</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Total Orders -->
+        <div class="col-md-3 mb-3">
+            <div class="card text-white bg-success h-100">
+                <div class="card-body d-flex align-items-center">
+                    <div class="me-3">
+                        <i class="bi bi-basket-fill" style="font-size: 2.5rem;"></i>
+                    </div>
+                    <div>
+                        <h5 class="card-title">Toplam Sipariş</h5>
+                        <h3>@Model.TotalOrders</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Today's Orders -->
+        <div class="col-md-3 mb-3">
+            <div class="card text-white bg-primary h-100">
+                <div class="card-body d-flex align-items-center">
+                    <div class="me-3">
+                        <i class="bi bi-calendar-check-fill" style="font-size: 2.5rem;"></i>
+                    </div>
+                    <div>
+                        <h5 class="card-title">Bugünkü Sipariş</h5>
+                        <h3>@Model.TodayOrders</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Total Products -->
+        <div class="col-md-3 mb-3">
+            <div class="card text-white bg-danger h-100">
+                <div class="card-body d-flex align-items-center">
+                    <div class="me-3">
+                        <i class="bi bi-cup-straw" style="font-size: 2.5rem;"></i>
+                    </div>
+                    <div>
+                        <h5 class="card-title">Ürünler</h5>
+                        <h3>@Model.TotalProducts</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Son Siparişler Tablosu -->
+    <div class="card mt-4">
+        <div class="card-header bg-dark text-white">
+            <h5 class="mb-0">Son Siparişler</h5>
+        </div>
+        <div class="card-body p-0">
+            <table class="table mb-0 table-striped">
+                <thead class="table-light">
+                    <tr>
+                        <th>Sipariş ID</th>
+                        <th>Ürün</th>
+                        <th>Durum</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var order in Model.LastOrders)
+                    {
+                        <tr>
+                            <td>@order.Id</td>
+                            <td>@order.ProductName</td>
+                            <td>@order.Status</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>
+
+<!-- Bootstrap Icons CDN (Eğer yoksa) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
