@@ -54,18 +54,14 @@ Eğer bu projeyi beğendiyseniz ya da bir şeyler sormak isterseniz bana ulaşab
 🔗 https://www.linkedin.com/in/agcayberkay9/
 
 Aşağıda projemden bazı görseller;
-![Ekran görüntüsü 2025-07-06 191141](https://github.com/user-attachments/assets/d41b264e-45d2-4bca-9a27-8c9edf03b4aa)
-![Ekran görüntüsü 2025-07-06 191131](https://github.com/user-attachments/assets/de8a004f-4019-439c-86d4-6502d6ec90b3)
-![Ekran görüntüsü 2025-07-06 191116](https://github.com/user-attachments/assets/7f72acc3-72f0-47ca-824a-97c45ddfd5c6)
-![Ekran görüntüsü 2025-07-06 191105](https://github.com/user-attachments/assets/3e4f0a7a-458d-452d-a111-e383fba2a0a8)
-![Ekran görüntüsü 2025-07-06 191054](https://github.com/user-attachments/assets/c74e895f-aac1-4400-9e7d-9701e4e4f09d)
-![Ekran görüntüsü 2025-07-06 191044](https://github.com/user-attachments/assets/e64c6b74-1099-4aaf-b899-e33ef43ce609)
-![Ekran görüntüsü 2025-07-06 191004](https://github.com/user-attachments/assets/cfc23486-be25-4b08-8890-1a749c3064dc)
-![Ekran görüntüsü 2025-07-06 190947](https://github.com/user-attachments/assets/54f14d62-3334-4336-aaed-0a4a74438f19)
-![Ekran görüntüsü 2025-07-06 190930](https://github.com/user-attachments/assets/e6d52f5f-8164-4af7-ba28-a02b4525ed59)
-![Ekran görüntüsü 2025-07-06 190915](https://github.com/user-attachments/assets/df22728b-f4bc-416a-906c-b7c8c8a34f53)
-![Ekran görüntüsü 2025-07-06 190856](https://github.com/user-attachments/assets/4a061de2-55d9-4b07-be90-d2bcbf5ba557)
-![Ekran görüntüsü 2025-07-06 190838](https://github.com/user-attachments/assets/1ad07412-9625-4bc0-bc46-873a1a7aae09)
+
+![Ekran görüntüsü 2025-07-06 191044](https://github.com/user-attachments/assets/4c0aa6e7-bce7-498c-916d-c548ace401b0)
+![Ekran görüntüsü 2025-07-06 191004](https://github.com/user-attachments/assets/66077fff-8f48-4c43-a978-8d4b03cfdc90)
+![Ekran görüntüsü 2025-07-06 190947](https://github.com/user-attachments/assets/f785e503-b71f-403f-8a53-2815fea91d17)
+![Ekran görüntüsü 2025-07-06 190930](https://github.com/user-attachments/assets/31f8ed6f-a438-4e24-9f1a-b9ff092ac6a3)
+![Ekran görüntüsü 2025-07-06 190915](https://github.com/user-attachments/assets/71b979e4-5c40-4ba8-b3df-42e6109ebfc4)
+![Ekran görüntüsü 2025-07-06 190856](https://github.com/user-attachments/assets/9fec97f9-3e4b-4d33-92ca-3ae1cb561aab)
+![Ekran görüntüsü 2025-07-06 190838](https://github.com/user-attachments/assets/66772b8f-03cf-4b74-9b51-b5e6c87ce2b2)
 
 
 
