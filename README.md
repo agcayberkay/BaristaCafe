@@ -50,7 +50,9 @@ Proje süresince hem mimari hem de kod kalitesi anlamında en iyi pratikleri uyg
 
 📬 İletişim
 Eğer bu projeyi beğendiyseniz ya da bir şeyler sormak isterseniz bana ulaşabilirsiniz:
+
 📧 berkay_agcay@hotmail.com
+
 🔗 https://www.linkedin.com/in/agcayberkay9/
 
 Aşağıda projemden bazı görseller;
